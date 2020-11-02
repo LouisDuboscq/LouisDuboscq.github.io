@@ -2,7 +2,7 @@
 layout: post
 title: Migration to Jetpack compose
 subtitle: New Android UI Toolkit
-tags: [android-jetpack-compose]
+tags: [android, android-jetpack-compose]
 comments: true 
 ---
  
