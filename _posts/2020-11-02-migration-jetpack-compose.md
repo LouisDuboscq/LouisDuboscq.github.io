@@ -7,7 +7,7 @@ comments: true
 ---
  
 We'll see briefly how to migrate an existing project to Jetpack compose. 
-If you don't know what compose is, you can have an [overview reading this]({% post_url 2020-11-01-jetpack-compose-overview %}).
+If you don't know what compose is, you can have an [overview reading this]({% post_url 2020-11-01-android-ui-history %}).
 
 ## Interoperability with existing codebase
 
