@@ -29,24 +29,21 @@ private TextView mLastName;
 ~~~
 Java 7 + old findById way
 
-**Java and findById ! I didn't miss you 🙅‍♂️**
+**Java 7 and findById ! I didn't miss you 🙅‍♂️**
 
-Around 2016 : Android developpers used to import Butterknife, this awesome library which avoided all the UI boilerplate. 
-You also could bind strings, dimensions, colors. It was 👌 at the time but it still lacks compile time safety
+Around 2016 : Android developpers used to import Butterknife. This was an awesome library which avoided all the UI boilerplate. 
+You also could bind strings, dimensions, colors. It was 👌 at the time but it lacked compile time safety.
 
-~~~
-@BindView(R.id.first_name) TextView firstName;
-@BindView(R.id.last_name) TextView lastName;
+A
+{% gist 29b435568b930352c9468f7f6396a9ab %} 
 
-@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.profile_fragment, container, false);
-    ButterKnife.bind(this, view);
-    return view;
-}
-~~~
-Butterknife way
+B
+{% gist https://gist.github.com/LouisDuboscq/29b435568b930352c9468f7f6396a9ab %}  
 
-Next ViewBinding, DataBinding, Kotlin and Kotlin synthetics arrived about the same time.
+C
+{% gist 29b435568b930352c9468f7f6396a9ab gist.md %} 
+
+Later ViewBinding, DataBinding, Kotlin and Kotlin synthetics arrived about the same time.
 
 ~~~  
 override fun onCreateView(
@@ -94,7 +91,7 @@ The way to build the UI are intuitive :
   
   
     
-Strength and honor to those who made all these moves : findView -> Butterknife -> ViewBinding / DataBinding -> Kotlin Synthetic and next Jetpack compose 
+**Strength and honor to those who made all these moves : findView -> Butterknife -> ViewBinding / DataBinding -> Kotlin Synthetic and next Jetpack compose**
 
 ![](https://i.ytimg.com/vi/3uKemgoWFlI/maxresdefault.jpg)
 
