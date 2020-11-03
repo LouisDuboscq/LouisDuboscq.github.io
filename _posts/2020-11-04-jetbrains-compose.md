@@ -38,7 +38,7 @@ Window { ... }
 
 ## My previous example with list
 
-Let's copy the example of a [basic list in compose]({% post_url 2020-11-03-jetpack-compose-basic-list %})
+Let's copying the example of a [basic list in compose]({% post_url 2020-11-03-jetpack-compose-basic-list %})
 
 ~~~
 fun main() = Window {
