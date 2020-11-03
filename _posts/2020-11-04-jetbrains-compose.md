@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Desktop application
-subtitle: Quick and dirty vs maintanable approaches 
+title: Desktop application with Jetpack Compose
+subtitle: Cross-platform future
 tags: [kotlin, kotlin-multiplatform, jetpack-compose]
 comments: true 
 ---
