@@ -53,7 +53,7 @@ I personnally used a lot kotlin synthetic since it takes way less code than all 
 All you need to know is the disadvantages in mind and you're good to go.
  
 {: .box-warning}
-**Warning:** Anyway in (Kotlin 1.4.20-M2)[https://github.com/JetBrains/kotlin/releases/tag/v1.4.20-M2] Jetbrains deprecated Kotlin Android Extensions compiler plugin in favour of other solutions.
+**Warning:** Anyway in Kotlin 1.4.20-M2 Jetbrains deprecated Kotlin Android Extensions compiler plugin in favour of other solutions.
  
 R.I.P 🕊️ all of you who migrated your codebase in favour of Android Kotlin extensions.
 
@@ -67,10 +67,10 @@ It allows to bind data from code to views with data tags and bind views to code.
 - Event listeners can also be set in data binding.
 - Kotlin code can significantly be reduced this way.
  
-However it increases compilation times 
+However it increases compilation times and :
 
 {: .box-warning}
-**Warning:** The solution may be misused with too much business logic in xml files and it may be too complicated to maintain those files 
+**Warning:** The solution may be misused with too much business logic in xml files. It may be too complicated to maintain those files.
 
 ## View Binding
 
@@ -84,17 +84,18 @@ It's almost same as DataBinding except :
 - Type-safe and null-safe 💪 : it works well in multiple configurations
 - Java or Kotlin 🙏
 
-It's definitelly easier to use than DataBinding, have a look if you don't already use it 👍
+It's definitelly easier to use than DataBinding, have a look if you don't already use it. 👍
  
 When ViewBinding is enabled in gradle module, it generates for each xml layout file a binding class in Java.
 E.g a `ActivityMainBinding` is generated because there is in module a file named `activity_main.xml`.
 
-It is type-safe and null-safe in the sense that generated classes have all xml views in properties already typed and annotated with @Nullable or @NonNull.
+It is type-safe and null-safe in the sense that generated classes have all xml views in properties 
+already typed and annotated with @Nullable or @NonNull.
 
-ViewBinding can do less than DataBinding but its advantage is speed.
+ViewBinding is kind of subset of DataBinding and that's why it can do less than DataBinding, but its advantage is simplicity and speed.
    
 {: .box-warning}
-**Warning:** ViewBinding introduces memory leaks when playing with fragments, you have to clear fragment binding in onDestroy
+**Warning:** ViewBinding introduces memory leaks when playing with fragments, you have to clear fragment binding in onDestroy.
 
 {: .box-note}
 **Note:** ViewBinding is the recommendation for building views.
@@ -138,6 +139,6 @@ You can also use compose for some parts of the application as you can read it [h
 In other cases, the current recommendation is to go with ViewBinding. 
 The migration is very easy and there are only pros to use it (fast, null and type safe, supports Java and Kotlin).
 
-In any case you should forget about Kotlin Android extensions because Jetbrains deprecated it in 1.4.20-M2.
+In any case you should forget about Kotlin Android extensions because Jetbrains deprecated it in (Kotlin 1.4.20-M2)[https://github.com/JetBrains/kotlin/releases/tag/v1.4.20-M2].
 
 And you, will you try compose, stay with the strong ViewBinding or maybe you prefer the traditionnal findViewById ?
