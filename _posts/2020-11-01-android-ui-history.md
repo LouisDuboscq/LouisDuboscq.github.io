@@ -8,7 +8,7 @@ comments: true
  
 Let's just see how Android **UI** development has evolved those last years and see what's next.
 
-## Java 7 + findById
+## Java 7 + findViewById
 
 Did you remember this 👻 from the past ? 
   
@@ -84,5 +84,6 @@ One the other hand, it's sure changes are expected before full release in 2021.
 
 I think Compose will be in Android ecosystem as important as the move from Java to Kotlin back in years.
 
-I already made these moves findView -> Butterknife -> ViewBinding / DataBinding / Kotlin Synthetic -> next Jetpack compose
-And you, will you try compose, stay with DataBinding/Synthetic or maybe you regret the time of Java7/findById ?
+I already made these moves findView -> Butterknife -> ViewBinding / DataBinding / Kotlin Synthetic -> next Jetpack compose.
+
+And you, will you try compose, stay with DataBinding/Synthetic or maybe you regret the time of Java7/findViewById ?
