@@ -10,33 +10,69 @@ Let's just see how Android **UI** development has evolved those last years and s
 
 ## Java 7 + findViewById
 
-Did you remember this 👻 from the past ? 
-  
 {% gist 157fad61faacccf446a657adf39e4693 %} 
    
-Lot of boilerplate, awkward namings, crashs on runtime, etc.
+Did you remember this 👻 from the past ? 
+  
+Traditionnal findViewById was a lot of boilerplate code, crashed on runtime (like often in Android+Java world ?). 
+Note at the time naming was weird.
 
-**Java 7 and findById ! I didn't miss you 🙅‍♂️**
+**Java 7 and findViewById ! I didn't miss you 🙅‍♂️**
 
 ## Butterknife
 
-Around 2016, Android developpers used to import Butterknife. This was an awesome library which avoided all the UI boilerplate. 
+~ 2013 :
+
+Android developpers used to import Butterknife. This was an awesome library which avoided all the UI boilerplate. 
 You also could bind strings, dimensions, colors. It was 👌 at the time but it lacked compile time safety.
  
 {% gist 29b435568b930352c9468f7f6396a9ab %} 
     
-Butterknife is now deprecated and it's recommended to switch to view binding / data binding.
+Since Kotlin arrival the new Butterknife, Kotterknife, could have been a possibility but it was recommended to switch to view binding / data binding.
+
+## Kotlin synthetic
+
+{% gist c4179f5ed85af353fc2c890a20ddef11 %}  
+
+~ 2016 :
+
+Kotlin synthetic is heavily used in android applications because it is really elegant version of findViewById, 
+it has good performance and it is easy to start with. 
+Under the hood, it calls findViewById, but it calls it only once for each views and caches 
+the view reference for next calls.
+
+However :
+- This is Kotlin only and Java does not have access to this feature
+- It lacks compile time safety and you can access ids of other layouts
+- It is not null-safe and you can access views only present in some configuration e.g. landscape layout
+- This does not work with multi-module while multi-module is highly recommended and used in applications
+
+This is why DataBinding/ViewBinding is recommended over Synthetic.
+
+I personnally used a lot kotlin synthetic since it takes way less code than all the others solutions (findViewById, ViewBinding, DataBinding, Kotterknife) and it's really easy to use.
+All you need to know is the disadvantages in mind and you're good to go.
+ 
+{: .box-warning}
+**Warning:** Anyway in (Kotlin 1.4.20-M2)[https://github.com/JetBrains/kotlin/releases/tag/v1.4.20-M2] Jetbrains deprecated Kotlin Android Extensions compiler plugin in favour of other solutions.
+ 
+R.I.P 🕊️ all of you who migrated your codebase in favour of Android Kotlin extensions.
 
 ## DataBinding
+
+~ Late 2018 :
 
 Jetpack released [Data Binding library](https://developer.android.com/topic/libraries/data-binding). 
 It allows to bind data from code to views with data tags and bind views to code.
 Population data boilerplate is eliminated : no more setText(), setImageResource() etc. 
-Event listeners can also be set in data binding. Kotlin code can significantly be reduced this way.
+Event listeners can also be set in data binding.
+Kotlin code can significantly be reduced this way.
 
-**DataBinding is the recommendation, since ~2019, for view building but it adds a bit of overhead compared to Android Kotlin Extensions**
+{: .box-note}
+**Note:** DataBinding is the recommendation, since ~2019, for view building but it adds a bit of overhead compared to Android Kotlin Extensions.
 
 ## View Binding
+
+~ 2019-2020 :
 
 Android Studio 3.6 released ViewBinding. It's almost same as DataBinding except : 
 - Layouts do not need layout tag as in DataBinding
@@ -45,23 +81,12 @@ Android Studio 3.6 released ViewBinding. It's almost same as DataBinding except 
 - type-safe and null-safe
  
 ViewBinding can do less than DataBinding but its advantage is speed.
-  
-## Kotlin synthetic
-
-Kotlin synthetic calls findViewById on the views under the hood, but it calls it only once for each 
-view and caches the view reference for next calls.
-
-{% gist c4179f5ed85af353fc2c890a20ddef11 %}  
-
-{: .box-warning}
-**Warning:** Typing isn't guaranteed
- 
-Kotlin synthetic is heavily used in android applications because it is really elegant version of findViewById, 
-it has good performance and it is easy to start with. But it lacks compile time safety. This is why DataBinding is recommended over this.
-  
+   
 ## Jetpack compose 
 
-Jetpack compose is the new thrilling UI toolkit for Android applications. 
+~ 2020-2021 :
+
+Now, Jetpack compose is the new thrilling UI toolkit for Android applications. 
 Alpha has been released in august 2020 and a full release is expected for 2021.
 
 It's a completely different way to build Android UI.
@@ -77,13 +102,13 @@ It allows developpers to significantly reduce, modularize and reuse code.
 {: .box-warning}
 **Warning:** All the API may change until full release planned in 2021
 
-It's moving fast ! This is at a time an advantage and a disadvantage.
+It's moving fast ! This is at a time a pro and a con.
 On the one hand lot's of feature is already available and the community is impressive.
 Even if something is missing in the library, it can be released very quickly. 
 One the other hand, it's sure changes are expected before full release in 2021.
 
 I think Compose will be in Android ecosystem as important as the move from Java to Kotlin back in years.
 
-I already made these moves findView -> Butterknife -> ViewBinding / DataBinding / Kotlin Synthetic -> next Jetpack compose.
+I already made these moves findViewById -> Butterknife -> ViewBinding / DataBinding / Kotlin Synthetic -> Jetpack compose.
 
-And you, will you try compose, stay with DataBinding/Synthetic or maybe you regret the time of Java7/findViewById ?
+And you, will you try compose, stay with DataBinding/Synthetic or maybe you prefer the traditionnal findViewById ?
