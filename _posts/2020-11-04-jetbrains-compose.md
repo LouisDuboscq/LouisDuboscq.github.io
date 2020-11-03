@@ -7,6 +7,7 @@ comments: true
 ---
 
 We live exciting moments !
+
 No I'm not talking about lockdown or election day but the amazing news that Jetpack Compose 
 on desktop is now accessible on EAP version of Intellij IDEA.
 
@@ -34,7 +35,7 @@ import androidx.compose.desktop.Window
 Window { ... }
 ~~~
  
-![](assets/img/jetbrains-compose-starter.gif)
+![](/assets/img/jetbrains-compose-starter.gif)
 
 ## My previous example with list
 
@@ -57,4 +58,6 @@ fun ListComponent(dataset: List<String>) {
 }
 ~~~
 
-![](assets/img/jetbrains-compose-list.gif)
+![](/assets/img/jetbrains-compose-list.gif)
+
+I can't wait to see the evolution of this amazing technology !
