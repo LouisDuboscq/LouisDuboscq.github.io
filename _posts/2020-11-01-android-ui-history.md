@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Android UI history
-subtitle: 10 years of Android
+title: Android UI - Where to start ?
+subtitle: Tools from past to future
 tags: [android, android-jetpack-compose]
 comments: true
 ---
@@ -112,3 +112,10 @@ I think Compose will be in Android ecosystem as important as the move from Java 
 I already made these moves findViewById -> Butterknife -> ViewBinding / DataBinding / Kotlin Synthetic -> Jetpack compose.
 
 And you, will you try compose, stay with DataBinding/Synthetic or maybe you prefer the traditionnal findViewById ?
+
+## TL;DR
+
+Since couple of years, android developpers have choices between severals libraries/manners to build their UI. 
+The current recommendation is to go with DataBinding/ViewBinding for existing codebase.
+If you are starting from scratch it may be conceivable to just use Compose if using it before full release does not scare you. 
+In any case you should forget about Kotlin Android extensions because Jetbrains deprecated it in 1.4.20-M2.
