@@ -41,8 +41,8 @@ Window { ... }
 
 ## My previous example with list
 
-Let's copying the example of a [basic list in compose]({% post_url 2020-11-03-jetpack-compose-basic-list %}) . 
-It's just copying / reusing in same codebase all the UI composable functions.
+Let's see how to port in desktop the example of a [basic list in compose]({% post_url 2020-11-03-jetpack-compose-basic-list %}) . 
+It's just reusing all Android composable functions.
 
 ~~~
 fun main() = Window {
@@ -63,10 +63,10 @@ fun ListComponent(dataset: List<String>) {
 
 ![](/assets/img/jetbrains-compose-list.gif)
  
- 
 ## Little bit more complicated UI
 
-I made this UI on desktop, this is just UI, no feature. It was inspired by this [dribble](https://dribbble.com/shots/14511340-Landing-UI/attachments/6197391?mode=media).
+I made this UI on desktop, this is just UI and there is no feature. 
+It was inspired by [this dribble](https://dribbble.com/shots/14511340-Landing-UI/attachments/6197391?mode=media).
 
 ![](/assets/img/compose-desktop.png)
 
@@ -75,8 +75,9 @@ You can find the code [here](https://gist.github.com/LouisDuboscq/dc14c0fae5eceb
 ## Conclusion
 
 Under the hood Jetbrains Compose is based on [skiko](https://github.com/JetBrains/skiko), a Jetbrains library powered by Kotlin Multiplatform. 
+It seems that the next compatible platform could be iOS and it would be awesome.
 
-Compose on desktop is available on Windows, Linux and mac OS.
+Compose on desktop is already available on Windows, Linux and mac OS.
 
 I can't wait to see the evolution of this amazing technology !
   
