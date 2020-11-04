@@ -139,6 +139,6 @@ You can also use compose for some parts of the application as you can read it [h
 In other cases, the current recommendation is to go with ViewBinding. 
 The migration is very easy and there are only pros to use it (fast, null and type safe, supports Java and Kotlin).
 
-In any case you should forget about Kotlin Android extensions because Jetbrains deprecated it in (Kotlin 1.4.20-M2)[https://github.com/JetBrains/kotlin/releases/tag/v1.4.20-M2].
+In any case you should forget about Kotlin Android extensions because Jetbrains deprecated it in (Kotlin 1.4.20-M2)[https://github.com/JetBrains/kotlin/releases/tag/v1.4.20-M2] .
 
 And you, will you try compose, stay with the strong ViewBinding or maybe you prefer the traditionnal findViewById ?
