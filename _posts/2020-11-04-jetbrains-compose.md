@@ -71,10 +71,10 @@ I made this UI on desktop, this is just UI, no feature. It was inspired by this 
 ![](/assets/img/compose-desktop.png)
 
 You can find the code [here](https://gist.github.com/LouisDuboscq/dc14c0fae5ecebe2490f26bbc7b26129).
- 
-## Under the hoods 
+  
+## Conclusion
 
-Jetbrains Compose is based on [skiko](https://github.com/JetBrains/skiko), a Jetbrains library powered by Kotlin Multiplatform. 
+Under the hood Jetbrains Compose is based on [skiko](https://github.com/JetBrains/skiko), a Jetbrains library powered by Kotlin Multiplatform. 
 
 Compose on desktop is available on Windows, Linux and mac OS.
 
