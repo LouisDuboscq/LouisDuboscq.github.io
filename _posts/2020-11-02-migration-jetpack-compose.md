@@ -1,23 +1,21 @@
 ---
 layout: post
-title: Migration to Jetpack compose
-subtitle: New Android UI Toolkit
+title: Tips for a bug while migrating to Jetpack compose
+subtitle: AssertionError: Unbound symbols not allowed
 tags: [android, android-jetpack-compose]
 comments: true 
 ---
  
-We'll see briefly how to migrate an existing project to Jetpack compose. 
-If you don't know what compose is, you can have an [overview reading this]({% post_url 2020-11-01-android-ui-history %}).
-
-## Interoperability with existing codebase
-
-Most of the time your project is too big to migrate the entire UI. 
-
+Was migrating an existing project to Jetpack compose and what.. Already an error...
+ 
+If you don't know what compose is, you can have an 
+[overview reading this]({% post_url 2020-11-01-android-ui-history %}).
+ 
 {: .box-error}
 **Error:** There's at the time an error if your project contains Kotlin synthetics, 
 the issue is reported on [IssueTracker](https://issuetracker.google.com/issues/166927559)
 
-At the time, the most updated versions are :
+For now, the most updated versions are :
 
 - 1.0.0-alpha06 for Jetpack compose
 - 1.4.10 for Kotlin
