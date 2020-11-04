@@ -63,11 +63,20 @@ fun ListComponent(dataset: List<String>) {
 
 ![](/assets/img/jetbrains-compose-list.gif)
  
+ 
+## Little bit more complicated UI
+
+I made this UI on desktop, this is just UI, no feature. It was inspired by this [dribble](https://dribbble.com/shots/14511340-Landing-UI/attachments/6197391?mode=media).
+
+![](/assets/img/compose-desktop.png)
+
+You can find the code [here](https://gist.github.com/LouisDuboscq/dc14c0fae5ecebe2490f26bbc7b26129).
+ 
 ## Under the hoods 
 
-Jetbrains Compose is based on [skiko](https://github.com/JetBrains/skiko), a Jetbrains library 
-which is powered by Kotlin Multiplatform. 
+Jetbrains Compose is based on [skiko](https://github.com/JetBrains/skiko), a Jetbrains library powered by Kotlin Multiplatform. 
 
-Compose on desktop is available on Windows, mac OS, Chrome OS and surely other platforms.
+Compose on desktop is available on Windows, Linux and mac OS.
 
 I can't wait to see the evolution of this amazing technology !
+  
