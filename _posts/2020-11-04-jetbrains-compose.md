@@ -15,6 +15,8 @@ Have a look on what it is and how to use it.
 
 ## Sample template
 
+When we launch Intellij IDEA, a sample template is provided for taking your first step with Compose on desktop. 
+
 ~~~
 fun main() = Window {
     var text by remember { mutableStateOf("Hello, World!") }
@@ -29,7 +31,7 @@ fun main() = Window {
 }
 ~~~
 
-Note the only new `Window` keyword that is making it magic. All the rest is basic Jetpack Compose.
+Note there is only a new `Window` keyword that is making it magic. All the rest is basic Jetpack Compose.
 
 ~~~
 import androidx.compose.desktop.Window
@@ -65,7 +67,7 @@ fun ListComponent(dataset: List<String>) {
  
 ## Little bit more complicated UI
 
-I made this UI on desktop, this is just UI and there is no feature. 
+I made this UI on desktop, this is just an UI and there is no feature. 
 It was inspired by [this dribble](https://dribbble.com/shots/14511340-Landing-UI/attachments/6197391?mode=media).
 
 ![](/assets/img/compose-desktop.png)
@@ -74,10 +76,11 @@ You can find the code [here](https://gist.github.com/LouisDuboscq/dc14c0fae5eceb
   
 ## Conclusion
 
-Under the hood Jetbrains Compose is based on [skiko](https://github.com/JetBrains/skiko), a Jetbrains library powered by Kotlin Multiplatform. 
-It seems that the next compatible platform could be iOS and it would be awesome.
+Under the hood Jetbrains Compose is based on Skia and it seems that the next compatible platform could be iOS, it would be awesome.
 
 Compose on desktop is already available on Windows, Linux and mac OS.
+
+Jetbrains just announced [Milestone 1 released](https://blog.jetbrains.com/cross-post/jetpack-compose-for-desktop-milestone-1-released/) and they said that more effort will be put on Kotlin multiplatform in near future.
 
 I can't wait to see the evolution of this amazing technology !
   
